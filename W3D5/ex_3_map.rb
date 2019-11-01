@@ -21,6 +21,13 @@ class Map
                 return @my_map[idx]
             end
         end
+        nil
+    end
+
+    def delete(key)
+        value = get(key)
+        @my_map.reject!{ |pair| pair[0] == key}
+        value
     end
 
     def show
