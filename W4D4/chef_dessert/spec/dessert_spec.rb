@@ -37,7 +37,7 @@ describe Dessert do
 
   describe "#mix!" do
     it "shuffles the ingredient array" do
-      expect(dessert.mix!).to eq(dessert.ingredients)
+      expect(dessert.mix!.object_id).to eq(dessert.ingredients.object_id)
     end
   end
 
